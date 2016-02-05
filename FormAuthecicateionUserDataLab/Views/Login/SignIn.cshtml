@@ -1,0 +1,30 @@
+﻿@model FormAuthecicateionUserDataLab.Models.SignInModel
+@{
+    ViewBag.Title = "SignIn";
+}
+<h2>
+    SignIn</h2>
+@using (Html.BeginForm())
+{
+    <table class="two-column" style="width: 100%;">
+        <tr>
+            <td style="width: 90px;">
+                @Html.LabelFor(m => m.UserName)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 90px;">
+                @Html.LabelFor(m => m.CustomUserData)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.CustomUserData)
+                @Html.ValidationMessageFor(m => m.CustomUserData)
+            </td>
+        </tr>
+    </table>
+    <input id="signin" type="submit" value="Sign In" style="margin-top: 10px;" />
+}

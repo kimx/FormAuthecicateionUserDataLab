@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+@using FormAuthecicateionUserDataLab.Models
+<h2>
+    Home</h2>
+Your username is: <strong>@User.Identity.Name</strong>
+<br />
+Your custom data is: <strong>@(((CustomIdentity)User.Identity).UniqueIdentifier)</strong>
+<br />
+@Html.ActionLink("Click here to refresh this page and verify the userdata is persisted.", "Home")
